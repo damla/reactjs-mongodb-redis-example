@@ -19,6 +19,7 @@
 
 ### Back-End
 
+- [MongoDB](https://www.mongodb.com) - İlk verilerin yüklenebilmesi için database üzerinden çekilecek. Sonrasında in-memory caching yapılacak.
 - [Redis](https://redis.io) - Verileri In-Memory tutmak için kullanılmıştır.
 - [ExpressJS](http://expressjs.com) - Server için NodeJS kütüphanesi olarak kullanılmıştır.
 
