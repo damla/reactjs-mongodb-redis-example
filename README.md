@@ -1,5 +1,8 @@
 # Hepsiburada React Challenge
 
+- [🔗 Client](https://hb-react-challenge-frontend.netlify.app)
+- [🔗 Server](https://hb-react-challenge-backend.herokuapp.com)
+
 ## Proje Amacı
 
 - Hepsiburada için arama sayfası yapmak amacıyla geliştirilimiştir.
