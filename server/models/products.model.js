@@ -23,7 +23,7 @@ ProductsModel.getById = async (id) => {
 };
 
 ProductsModel.getAll = async () => {
-  return ProductsModel.find({});
+  return ProductsModel.find();
 };
 
 export default ProductsModel;
