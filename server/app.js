@@ -1,18 +1,23 @@
 import express from "express";
+import bodyParser from "body-parser";
 import cors from "cors";
-import client from "./libs/redis/index.js";
-import { getData } from "./libs/db/index.js";
-const app = express();
+import products from "./routes/products.route.js";
+import connectToDb from "./libs/db/mongoose.js";
 
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+connectToDb();
 
+const app = express();
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use("/get", products);
+
+//Index route
 app.get("/", async (req, res) => {
-  await client.set("name", "damla");
-  const name = await client.get("name");
-  getData("product");
-  res.end(`name value: ${name}`);
+  res.end(`Groove street`);
 });
 
 app.listen(PORT, () => {
