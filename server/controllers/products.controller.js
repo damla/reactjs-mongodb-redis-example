@@ -7,13 +7,13 @@ controller.getAll = async (req, res) => {
   try {
     // check if data exist in memory cache
     let data = await client.get("products");
-    let cachedProducts = JSON.parse(data);
+    let cachedData = JSON.parse(data);
 
     // if data exist, send it as a response
-    if (cachedProducts) {
-      if (cachedProducts <= 0)
-        res.status(404).json("Product data does not exist.");
-      res.status(200).json(cachedProducts);
+    if (cachedData) {
+      if (cachedData <= 0)
+        res.status(404).json("Products data does not exist.");
+      res.status(200).json(cachedData);
     } else {
       // pull data from db
       let products = await Product.getAll();
@@ -22,11 +22,11 @@ controller.getAll = async (req, res) => {
       await client.set("products", JSON.stringify(products));
 
       // send data pulled from db
-      if (products <= 0) res.status(404).json("Product data does not exist.");
+      if (products <= 0) res.status(404).json("Products data does not exist.");
       res.status(200).json(products);
     }
   } catch (err) {
-    console.error("Error in getting product- " + err.message);
+    console.error("Error in getting products data - " + err.message);
     res
       .status(500)
       .json({ error: "Got error in getAll controller of products" });

@@ -5,19 +5,29 @@ const controller = {};
 
 controller.getAll = async (req, res) => {
   try {
+    // check if data exist in memory cache
     let data = await client.get("colors");
+    let cachedData = JSON.parse(data);
 
-    if (data) res.status(200).send(data);
-    else {
-      let colorData = await Color.getAll();
+    // if data exist, send it as a response
+    if (cachedData) {
+      if (cachedData <= 0) res.status(404).json("Colors data does not exist.");
+      res.status(200).json(cachedData);
+    } else {
+      // pull data from db
+      let colors = await Color.getAll();
 
-      await client.set("colors", JSON.stringify({ ...colorData }));
-      let colors = await client.get("colors");
-      res.status(200).send(JSON.parse(colors));
+      // cache the data
+      await client.set("colors", JSON.stringify(colors));
+
+      // send data pulled from db
+      if (colors <= 0) res.status(404).json("Colors data does not exist.");
+      res.status(200).json(colors);
     }
   } catch (err) {
-    console.log("Error in getting product- " + err);
-    res.status(500).end("Got error in getAll");
+    console.error("Error in getting colors data - " + err.message);
+    res.status(500).json({ error: "Got error in getAll controller of colors" });
   }
 };
+
 export default controller;
