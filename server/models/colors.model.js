@@ -2,9 +2,9 @@ import mongoose from "mongoose";
 
 const ColorSchema = mongoose.Schema(
   {
-    _id: mongoose.Schema.ObjectId,
+    _id: mongoose.Schema.Types.ObjectId,
     name: String,
-    price: [mongoose.Schema.ObjectId],
+    products: [{ type: mongoose.Schema.Types.ObjectId, ref: "products" }],
   },
   { collection: "color" }
 );

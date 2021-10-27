@@ -5,19 +5,28 @@ const controller = {};
 
 controller.getAll = async (req, res) => {
   try {
-    let data = await client.get("brans");
+    // check if data exist in memory cache
+    let data = await client.get("brands");
+    let cachedData = JSON.parse(data);
 
-    if (data) res.status(200).send(data);
-    else {
-      let brandData = await Brand.getAll();
+    // if data exist, send it as a response
+    if (cachedData) {
+      if (cachedData <= 0) res.status(404).json("Brands data does not exist.");
+      res.status(200).json(cachedData);
+    } else {
+      // pull data from db
+      let brands = await Brand.getAll();
 
-      await client.set("brands", JSON.stringify({ ...brandData }));
-      let brands = await client.get("brands");
-      res.status(200).send(JSON.parse(brands));
+      // cache the data
+      await client.set("brands", JSON.stringify(brands));
+
+      // send data pulled from db
+      if (brands <= 0) res.status(404).json("Brands data does not exist.");
+      res.status(200).json(brands);
     }
   } catch (err) {
-    console.log("Error in getting product- " + err);
-    res.status(500).end("error");
+    console.error("Error in getting brands data - " + err.message);
+    res.status(500).json({ error: "Got error in getAll controller of brands" });
   }
 };
 export default controller;
