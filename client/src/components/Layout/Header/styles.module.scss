@@ -1,0 +1,8 @@
+@use "../../../global/variables.scss" as vars;
+
+.container {
+  display: flex;
+  width: 1440px; // TODO
+  height: 96px; // TODO
+  align-items: baseline;
+}
