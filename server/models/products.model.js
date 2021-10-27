@@ -2,12 +2,12 @@ import mongoose from "mongoose";
 
 const ProductSchema = mongoose.Schema(
   {
-    _id: mongoose.Schema.ObjectId,
+    _id: mongoose.Schema.Types.ObjectId,
     name: String,
     color: String,
     brand: String,
     price: {
-      base: mongoose.Decimal128,
+      base: mongoose.Number,
       discountAmount: Number,
     },
     createdAt: Date,
