@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import { Logo } from "../../../assets";
-import { Search } from "../..";
+import { Search, Basket } from "../..";
 export default function Header() {
   return (
     <header className={styles.Container}>
@@ -8,7 +8,7 @@ export default function Header() {
         <img className={styles.Logo} src={Logo} alt="hb-logo" />
       </a>
       <Search />
-      <div>Header</div>
+      <Basket />
     </header>
   );
 }

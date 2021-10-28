@@ -1,0 +1,43 @@
+@use "../../global/variables.scss" as vars;
+
+.Container {
+  border: 1px solid vars.$border-color;
+  background-color: #ffff;
+  border-radius: 4px;
+  width: 120px;
+  min-width: 120px;
+  height: 48px;
+  min-height: 48px;
+  color: vars.$border-color;
+  font-size: 17px;
+  line-height: 24.31px;
+  position: relative;
+
+  &.Open {
+    border-radius: 4px 4px 0 0;
+    border-bottom-color: #ffff;
+  }
+
+  .Count {
+    position: absolute;
+    top: -7px;
+    right: -4px;
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    min-height: 18px;
+    font-size: 12px;
+    color: #ffff;
+    line-height: 100%;
+    font-weight: 500;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: vars.$brand-color;
+
+    &.Hidden {
+      display: none;
+    }
+  }
+}
