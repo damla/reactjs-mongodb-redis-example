@@ -1,25 +1,27 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./styles.module.scss";
+import { BasketDetails } from "..";
 
 export default function Basket() {
   const [isOpen, setIsOpen] = useState(false);
-  const [count] = useState(0);
+  const [count] = useState(4);
 
   const openCart = () => {
     setIsOpen(!isOpen);
   };
 
+  const buttonClasses = cn(styles.Button, isOpen && styles.Open);
+  const countClasses = cn(styles.Count, count === 0 && styles.Hidden);
+
   return (
-    <button
-      onClick={() => openCart()}
-      className={cn(styles.Container, isOpen && styles.Open)}
-    >
-      <span className={cn(styles.Count, count === 0 && styles.Hidden)}>
-        {count}
-      </span>
-      Sepetim
-    </button>
+    <div className={styles.Container}>
+      <button onClick={() => openCart()} className={buttonClasses}>
+        <span className={countClasses}>{count}</span>
+        Sepetim
+      </button>
+      {isOpen && <BasketDetails />}
+    </div>
   );
 }
 
