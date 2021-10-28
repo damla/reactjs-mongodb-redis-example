@@ -1,3 +1,5 @@
+$desktop-width: 1440px;
+
 $brand-color: #ff6000; // logo, linkler vs
 
 $border-color: #b0b0b0; // buttonlar sepetim, siralama
@@ -15,6 +17,8 @@ $hover-link-color: $brand-color;
 $add-to-cart-btn-bg: rgba(255, 96, 0, 0.11);
 $cart-remove-btn-color: $highlight-font-color;
 $pagination-btn-color: #eeeeee;
+$search-bg-color: $pagination-btn-color;
+$search-ph-color: $border-color;
 
 $secondary-bg-color: $border-color; // search, deactive button
 // @use "../../global/variables.scss" as vars;
