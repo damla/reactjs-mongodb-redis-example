@@ -6,13 +6,16 @@
   height: 96px;
   padding: 0 80px;
   align-items: center;
-  justify-content: space-between;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
-  // background-color: aqua;
 
-  .Logo {
-    width: 211.52px;
+  .Link {
     height: 35px;
-    cursor: pointer;
+    min-width: 211.52px;
+    margin-right: 153.48px;
+    min-height: 35px;
+  }
+
+  @media only screen and (min-width: vars.$desktop-width) {
+    justify-content: center;
   }
 }

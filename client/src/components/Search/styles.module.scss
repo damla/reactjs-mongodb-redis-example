@@ -4,10 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 669px;
-  min-width: 669px;
+  width: 695px;
+  min-width: 695px;
   height: 48px;
-  padding: 0 20px;
+  padding-left: 20px;
+  margin-right: 100px;
   border-radius: 100px;
   background-color: vars.$search-bg-color;
   cursor: text;
