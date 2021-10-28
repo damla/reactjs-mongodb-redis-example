@@ -16,6 +16,7 @@
 - [SASS](https://sass-lang.com) - CSS extension dili olarak kullanılmıştır.
 - [Classnames](https://www.npmjs.com/package/classnames) - Stil sınıflarını koşullara göre eklemek/ çıkarmak için kullanılmıştır.
 - [Context API](https://reactjs.org/docs/context.html) - Zaman kısıtlamasından ve built-in olmasından dolayı state yönetimi için Context API tercih edilmiştir.
+- [React Router](https://reactrouter.com/) - Routing kütüphanesi olarak tercih edilmiştir.
 
 ### Back-End
 
