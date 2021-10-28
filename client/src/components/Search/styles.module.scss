@@ -1,0 +1,50 @@
+@use "../../global/variables.scss" as vars;
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 669px;
+  height: 48px;
+  padding: 0 20px;
+  border-radius: 100px;
+  background-color: vars.$search-bg-color;
+  cursor: text;
+
+  .LogoWrapper {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    margin-right: 4px;
+    cursor: default;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SearchInput {
+    width: 100%;
+    border: unset;
+    outline: unset;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: transparent;
+    color: vars.$primary-font-color;
+  }
+
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: vars.$search-ph-color;
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: vars.$search-ph-color;
+  }
+
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: vars.$search-ph-color;
+  }
+}
