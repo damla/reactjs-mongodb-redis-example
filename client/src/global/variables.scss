@@ -1,0 +1,24 @@
+$desktop-width: 1440px;
+
+$brand-color: #ff6000; // logo, linkler vs
+
+$border-color: #b0b0b0; // buttonlar sepetim, siralama
+$hover-border-color: $border-color; // ürüne hover edilmesi
+
+$primary-font-color: #484848; // ana baslik, alt basliklar
+$secondary-font-color: #646464; // linkler
+$disabled-font-color: #9b9b9b; // düşülen para
+$highlight-font-color: #f90000; // indirim, sepetten kaldir butonu
+
+$link-color: $secondary-font-color;
+$visited-link-color: $secondary-font-color;
+$hover-link-color: $brand-color;
+
+$add-to-cart-btn-bg: rgba(255, 96, 0, 0.11);
+$cart-remove-btn-color: $highlight-font-color;
+$pagination-btn-color: #eeeeee;
+$search-bg-color: $pagination-btn-color;
+$search-ph-color: $border-color;
+
+$secondary-bg-color: $border-color; // search, deactive button
+// @use "../../global/variables.scss" as vars;
