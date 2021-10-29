@@ -15,3 +15,4 @@ export { default as LinkList } from "./LinkList";
 export { default as Link } from "./Link";
 export { default as ProductTable } from "./ProductTable";
 export { default as ProductRow } from "./ProductTable/ProductRow";
+export { default as ProductItem } from "./ProductTable/ProductItem";

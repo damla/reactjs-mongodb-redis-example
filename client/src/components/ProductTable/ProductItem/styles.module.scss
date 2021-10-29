@@ -1,0 +1,10 @@
+@use "../../../global/variables.scss" as vars;
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  width: 254px;
+  min-height: 384px;
+  height: 384px;
+  background-color: yellow;
+}
