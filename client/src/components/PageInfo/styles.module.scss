@@ -1,9 +1,11 @@
 @use "../../global/variables.scss" as vars;
-// TODO: PIXEL PERFECT
+
 .Container {
   display: flex;
-  flex-direction: column;
+  flex-grow: 3;
   position: relative;
+  flex-direction: column;
+  padding-left: 3px;
 
   .PageTitle {
     font-family: Roboto;
@@ -21,6 +23,7 @@
     position: absolute;
     top: 30px;
     left: 0;
+    width: 100%;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -28,9 +31,12 @@
 
     .SearchLabel {
       color: vars.$muted-font-color;
+      width: 100.33px;
+      min-width: 100.33px;
     }
 
     .searchText {
+      margin-left: 6px;
       color: black;
     }
   }

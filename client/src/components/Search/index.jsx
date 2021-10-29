@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import { SearchIcon } from "../../assets/";
-
+// TODO: max input karakterini sinirla
 export default function Search() {
   return (
     <div className={styles.Container}>

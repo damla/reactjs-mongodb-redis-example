@@ -4,10 +4,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 84px;
-  min-height: 84px;
+  height: 82px;
+  min-height: 82px;
   width: vars.$desktop-width;
   min-width: vars.$desktop-width;
   max-width: vars.$desktop-width;
-  padding: 0 80px;
+  padding: 0 80px 2px 80px;
 }
