@@ -24,8 +24,3 @@ export default function Basket() {
     </div>
   );
 }
-
-// button
-// carttaki eleman sayisi gosteren imlec
-// basket detail
-// icerisindeki elemanlar
