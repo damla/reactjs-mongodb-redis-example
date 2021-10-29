@@ -1,4 +1,7 @@
-.container {
+.Container {
+  width: 206px;
+  min-width: 206px;
+  padding-top: 19px;
   display: flex;
   flex-direction: column;
 }

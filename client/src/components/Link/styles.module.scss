@@ -1,0 +1,15 @@
+@use "../../global/variables.scss" as vars;
+
+.Container {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: vars.$link-color;
+  cursor: pointer;
+
+  &:hover {
+    color: vars.$hover-link-color;
+  }
+}

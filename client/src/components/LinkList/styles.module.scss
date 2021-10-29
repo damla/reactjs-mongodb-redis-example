@@ -1,0 +1,18 @@
+@use "../../global/variables.scss" as vars;
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.Title {
+  padding-left: 1px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: vars.$primary-font-color;
+  margin-bottom: 20px;
+}

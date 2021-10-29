@@ -1,0 +1,25 @@
+@use "../../../global/variables.scss" as vars;
+
+.Container {
+  display: flex;
+  align-items: center;
+  margin-top: 39px;
+
+  .Button {
+    width: 33px;
+    height: 33px;
+    background-color: #ffff;
+    margin-left: 13.2px;
+    border: 1px solid vars.$pagination-btn-color;
+    border-radius: 9px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 20px;
+    color: vars.$secondary-font-color;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
