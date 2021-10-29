@@ -17,3 +17,5 @@ export { default as ProductTable } from "./ProductTable";
 export { default as ProductRow } from "./ProductTable/ProductRow";
 export { default as ProductItem } from "./ProductTable/ProductItem";
 export { default as Pagination } from "./ProductTable/Pagination";
+export { default as AddButton } from "./AddButton";
+export { default as Modal } from "./Modal";
