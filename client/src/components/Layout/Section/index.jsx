@@ -3,7 +3,7 @@ import { ProductTable, ProductRow, ProductItem } from "../..";
 
 export default function Section() {
   return (
-    <section className={styles.container}>
+    <section className={styles.Container}>
       <ProductTable>
         <ProductRow>
           <ProductItem />

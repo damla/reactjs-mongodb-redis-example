@@ -12,4 +12,12 @@
     height: 72px;
     margin-right: 10px;
   }
+
+  &.ProductItemImg {
+    background-color: white;
+    min-height: 339px;
+    min-width: 254px;
+    width: 100%;
+    padding: 3px 15px 4px 15px;
+  }
 }
