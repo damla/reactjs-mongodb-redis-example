@@ -1,0 +1,57 @@
+@use "../../global/variables.scss" as vars;
+
+.Container {
+  position: relative;
+  display: flex;
+  border: 1px solid vars.$sorting-border-color;
+  background-color: #ffff;
+  border-radius: 4px;
+  width: 120px;
+  min-width: 120px;
+  height: 48px;
+  min-height: 48px;
+  color: vars.$border-color;
+  align-items: center;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  .Text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 143%;
+    height: 100%;
+    width: 82.5%;
+  }
+
+  .Icon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .Menu {
+    display: none;
+
+    &.Open {
+      display: block;
+      position: absolute;
+      top: 47px;
+      right: 0;
+      width: 274px;
+      max-width: 274px;
+      height: 152px;
+      max-height: 152px;
+      border-radius: 3px;
+      color: #ffff;
+      background-color: #373737;
+    }
+  }
+}
