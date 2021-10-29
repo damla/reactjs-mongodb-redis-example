@@ -1,0 +1,44 @@
+@use "../../../global/variables.scss" as vars;
+
+.Container {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  height: 72px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  .Wrapper {
+    height: 100%;
+    width: 170px;
+    min-width: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .ItemName {
+      color: vars.$primary-font-color;
+      width: 170px;
+      min-width: 170px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .RemoveButton {
+      border: 0.5px solid vars.$cart-remove-btn-color;
+      background-color: #ffff;
+      color: vars.$cart-remove-btn-color;
+      border-radius: 4px;
+      width: 51px;
+      min-width: 51px;
+      height: 20px;
+      min-height: 20px;
+      font-size: 10px;
+      line-height: 18px;
+      cursor: pointer;
+    }
+  }
+}
