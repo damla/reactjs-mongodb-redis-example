@@ -21,7 +21,6 @@ export default function Section() {
           <ProductItem />
           <ProductItem />
           <ProductItem />
-          <ProductItem />
         </ProductRow>
       </ProductTable>
     </section>
