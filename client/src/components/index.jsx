@@ -16,3 +16,4 @@ export { default as Link } from "./Link";
 export { default as ProductTable } from "./ProductTable";
 export { default as ProductRow } from "./ProductTable/ProductRow";
 export { default as ProductItem } from "./ProductTable/ProductItem";
+export { default as Pagination } from "./ProductTable/Pagination";
