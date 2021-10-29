@@ -1,6 +1,5 @@
-import { LinkList } from "../..";
+import { LinkList, Link } from "../..";
 import styles from "./styles.module.scss";
-import { Link } from "../..";
 
 export default function Sidebar() {
   return (

@@ -1,7 +1,4 @@
-import { Header } from "..";
-import { SubHeader } from "..";
-import { Sidebar } from "..";
-import { Section } from "..";
+import { Header, SubHeader, Sidebar, Section } from "..";
 
 import styles from "./styles.module.scss";
 

@@ -1,0 +1,13 @@
+@use "../../global/variables.scss" as vars;
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .Table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
