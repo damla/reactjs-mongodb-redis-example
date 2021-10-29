@@ -1,0 +1,15 @@
+@use "../../global/variables.scss" as vars;
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid vars.$cart-item-border-color;
+  border-radius: 4px;
+
+  &.BasketItemImg {
+    width: 54px;
+    height: 72px;
+    margin-right: 10px;
+  }
+}
