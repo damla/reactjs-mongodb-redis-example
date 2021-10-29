@@ -8,3 +8,4 @@ export { default as Basket } from "./Basket";
 export { default as BasketDetails } from "./Basket/BasketDetails";
 export { default as BasketItem } from "./Basket/BasketItem";
 export { default as ImageBox } from "./ImageBox";
+export { default as PageInfo } from "./PageInfo";

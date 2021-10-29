@@ -1,3 +1,13 @@
-.container {
+@use "../../../global/variables.scss" as vars;
+
+.Container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+  min-height: 84px;
+  width: vars.$desktop-width;
+  min-width: vars.$desktop-width;
+  max-width: vars.$desktop-width;
+  padding: 0 80px;
 }
