@@ -1,0 +1,27 @@
+@use "../../global/variables.scss" as vars;
+
+.ActiveButton {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: vars.$add-to-cart-btn-bg;
+  color: vars.$hover-link-color;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  width: 233px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.DeactiveButton {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: vars.$cart-remove-deactive-btn-color;
+  color: vars.$deactive-font-color;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  width: 233px;
+  height: 32px;
+  cursor: pointer;
+}
