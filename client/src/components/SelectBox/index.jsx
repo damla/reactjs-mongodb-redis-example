@@ -12,7 +12,11 @@ export default function SelectBox() {
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (clickRef.current && !clickRef.current.contains(event.target)) {
+      if (
+        clickRef.current &&
+        !clickRef.current.contains(event.target) &&
+        isOpen === true
+      ) {
         setIsOpen(!isOpen);
       }
     }
