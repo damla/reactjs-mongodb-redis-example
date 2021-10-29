@@ -1,8 +1,18 @@
-.container {
+@use "../../global/variables.scss" as vars;
+
+.Container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
   width: 100vw;
+
+  .Wrapper {
+    display: flex;
+    min-width: vars.$desktop-width;
+    max-width: vars.$desktop-width;
+    padding: 0 80px 2px 80px;
+    justify-content: space-between;
+  }
 }

@@ -5,14 +5,15 @@ import { Section } from "..";
 
 import styles from "./styles.module.scss";
 
-export default function Layout({ children }) {
+export default function Layout() {
   return (
-    <div className={styles.container}>
+    <div className={styles.Container}>
       <Header />
       <SubHeader />
-      <Sidebar />
-      <Section />
-      {children}
+      <div className={styles.Wrapper}>
+        <Sidebar />
+        <Section />
+      </div>
     </div>
   );
 }
