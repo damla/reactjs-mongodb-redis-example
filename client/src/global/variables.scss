@@ -5,10 +5,12 @@ $brand-color: #ff6000; // logo, linkler vs
 $border-color: #b0b0b0; // buttonlar sepetim
 $sorting-border-color: #b4b4bb; //siralama
 $hover-border-color: $border-color; // ürüne hover edilmesi
+$stroke-border-color: #cdcdcd;
 
 $muted-font-color: $border-color;
 $primary-font-color: #484848; // ana baslik, alt basliklar
 $secondary-font-color: #646464; // linkler
+$deactive-font-color: $border-color; // sepet deactive
 $disabled-font-color: #9b9b9b; // düşülen para
 $highlight-font-color: #f90000; // indirim, sepetten kaldir butonu
 
@@ -19,8 +21,8 @@ $hover-link-color: $brand-color;
 $add-to-cart-btn-bg: rgba(255, 96, 0, 0.11);
 $cart-item-border-color: #e5e5e5;
 $cart-remove-btn-color: $highlight-font-color;
+$cart-remove-deactive-btn-color: rgba(126, 126, 126, 0.11);
 $pagination-btn-color: #eeeeee;
 $search-bg-color: $pagination-btn-color;
 $search-ph-color: $border-color; // search placeholder
 
-$secondary-bg-color: $border-color; // search, deactive button

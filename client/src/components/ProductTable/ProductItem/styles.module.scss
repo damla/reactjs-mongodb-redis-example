@@ -9,21 +9,27 @@
   max-height: 100%;
   height: 100%;
 
+  &.Stroke {
+    border: 1px solid vars.$stroke-border-color;
+    border-radius: 4px;
+  }
+
   .Content {
     display: flex;
     width: 230px;
     max-width: 230px;
+    height: 130px;
+    max-height: 130px;
     align-items: flex-start;
     flex-direction: column;
+    justify-content: space-between;
 
     .Name {
-      font-family: Roboto;
+      padding-top: 9px;
       font-style: normal;
       font-weight: normal;
       font-size: 12px;
       line-height: 18px;
-      margin-top: 9px;
-      margin-bottom: 10px;
     }
 
     .Variant {
@@ -33,8 +39,6 @@
       font-size: 12px;
       line-height: 18px;
       color: vars.$primary-font-color;
-      // .Label {
-      // }
 
       .Name {
         font-weight: normal;
@@ -43,7 +47,6 @@
 
     .Price {
       height: 17px;
-      margin-top: 13px;
       font-style: normal;
       font-weight: bold;
       font-size: 14px;
