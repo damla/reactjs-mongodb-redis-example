@@ -9,3 +9,5 @@ export { default as BasketDetails } from "./Basket/BasketDetails";
 export { default as BasketItem } from "./Basket/BasketItem";
 export { default as ImageBox } from "./ImageBox";
 export { default as PageInfo } from "./PageInfo";
+export { default as SelectBox } from "./SelectBox";
+export { default as SelectBoxItem } from "./SelectBox/SelectBoxItem";

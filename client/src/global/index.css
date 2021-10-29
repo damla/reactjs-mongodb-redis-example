@@ -9,13 +9,13 @@
   font-family: "Roboto";
 }
 
+
 button {
   outline-color: unset;
   overflow: visible;
   text-transform: none;
   -webkit-appearance: button;
   margin: 0; /* 2 */
-  font-family: inherit; /* 1 */
 }
 
 body {

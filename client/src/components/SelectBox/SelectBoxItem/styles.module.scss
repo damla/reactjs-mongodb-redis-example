@@ -1,0 +1,33 @@
+@use "../../../global/variables.scss" as vars;
+
+.Container {
+  display: flex;
+  align-items: center;
+  height: 25%;
+
+  .Check {
+    width: 8.88%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+
+    &.Checked {
+      visibility: visible;
+    }
+  }
+
+  &:hover {
+    background-color: #005bd9;
+  }
+
+  &:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+
+  &:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+}
