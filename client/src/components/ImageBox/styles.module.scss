@@ -7,17 +7,24 @@
   border: 1px solid vars.$cart-item-border-color;
   border-radius: 4px;
 
-  &.BasketItemImg {
-    width: 54px;
-    height: 72px;
-    margin-right: 10px;
-  }
-
   &.ProductItemImg {
     background-color: white;
     min-height: 339px;
     min-width: 254px;
-    width: 100%;
     padding: 3px 15px 4px 15px;
+  }
+
+  &.Hovered {
+    border: 1px solid transparent;
+    outline: unset;
+    width: 252px;
+    min-width: 252px;
+    padding: 2px 13px 4px 13px;
+  }
+
+  &.BasketItemImg {
+    width: 54px;
+    height: 72px;
+    margin-right: 10px;
   }
 }
