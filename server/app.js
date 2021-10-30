@@ -24,8 +24,8 @@ app.get("/", async (req, res) => {
   res.json({
     endPoints: [
       { products: [{ all: "/products" }, { id: "products:id" }] },
-      { brands: [{ all: "/brands" }, { id: "brands:id" }] },
-      { colors: [{ all: "/brands" }, { id: "brands:id" }] },
+      { brands: [{ all: "/brands" }, { productIds: "brands/:name" }] },
+      { colors: [{ all: "/colors" }, { productIds: "colors/:name" }] },
     ],
   });
 });
