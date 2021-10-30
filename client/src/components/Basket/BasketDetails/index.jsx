@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 // import cn from "classnames";
 import styles from "./styles.module.scss";
 import BasketItem from "../BasketItem";
