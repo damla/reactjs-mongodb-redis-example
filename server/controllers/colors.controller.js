@@ -1,5 +1,6 @@
 import Color from "../models/colors.model.js";
 import client from "../libs/redis/index.js";
+import hashProductId from "../libs/redis/helpers.js";
 
 const controller = {};
 
@@ -22,11 +23,26 @@ controller.getAll = async (req, res) => {
 
       // send data pulled from db
       if (colors <= 0) res.status(404).json("Colors data does not exist.");
+
+      hashProductId(colors);
       res.status(200).json(colors);
     }
   } catch (err) {
     console.error("Error in getting colors data - " + err.message);
     res.status(500).json({ error: "Got error in getAll controller of colors" });
+  }
+};
+
+controller.getProductIds = async (req, res) => {
+  // TODO: call getAll before this function
+  try {
+    client.smembers(req.params.name, (err, result) => {
+      if (err) res.status(500).end(err);
+      else res.status(200).json(result);
+    });
+  } catch (err) {
+    console.error("Error in getting brands data - " + err.message);
+    res.status(500).json({ error: "Got error in getAll controller of brands" });
   }
 };
 

@@ -21,7 +21,13 @@ app.use("/brands", brands);
 
 //Index route
 app.get("/", async (req, res) => {
-  res.end(`Groove street`);
+  res.json({
+    endPoints: [
+      { products: [{ all: "/products" }, { id: "products:id" }] },
+      { brands: [{ all: "/brands" }, { productIds: "brands/:name" }] },
+      { colors: [{ all: "/colors" }, { productIds: "colors/:name" }] },
+    ],
+  });
 });
 
 app.listen(PORT, () => {
