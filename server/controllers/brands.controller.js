@@ -1,6 +1,6 @@
 import Brand from "../models/brands.model.js";
 import client from "../libs/redis/index.js";
-import hashProductId from "../libs/helpers.js";
+import hashProductId from "../libs/redis/helpers.js";
 
 const controller = {};
 
@@ -37,7 +37,6 @@ controller.getAll = async (req, res) => {
 
 controller.getProductIds = async (req, res) => {
   // TODO: call getAll before this function
-
   try {
     client.smembers(req.params.name, (err, result) => {
       if (err) res.status(500).end(err);
