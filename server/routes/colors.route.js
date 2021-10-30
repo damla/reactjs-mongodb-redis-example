@@ -7,4 +7,8 @@ router.get("/all", (req, res) => {
   colorController.getAll(req, res);
 });
 
+router.get("/:name", (req, res) => {
+  colorController.getProductIds(req, res);
+});
+
 export default router;
