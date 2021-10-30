@@ -12,8 +12,9 @@ connectToDb();
 
 const app = express();
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ type: "application/json" }));
 
 app.use("/products", products);
 app.use("/colors", colors);
@@ -33,3 +34,5 @@ app.get("/", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`listening on *:${PORT}`);
 });
+
+export default app;

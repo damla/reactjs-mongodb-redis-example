@@ -1,6 +1,6 @@
 import Color from "../models/colors.model.js";
 import client from "../libs/redis/index.js";
-import hashProductId from "../libs/redis/helpers.js";
+import hashProductId from "../libs/redis/utils.js";
 
 const controller = {};
 
