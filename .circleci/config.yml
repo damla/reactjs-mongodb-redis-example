@@ -28,7 +28,7 @@ jobs:
           pkg-manager: yarn
       - run:
           name: Run tests
-          command: yarn --prefix ./server test
+          command: yarn --prefix ./app test
 
 workflows:
   # Below is the definition of your workflow.
