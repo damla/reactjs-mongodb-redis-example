@@ -7,7 +7,7 @@ export default function SelectBoxItem({ selection }) {
 
   const handleCheck = () => setChecked(!isChecked);
 
-  const checkClasses = cn(styles.Check, isChecked && styles.Checked);
+  const checkClasses = cn(styles.Check, isChecked ? styles.Checked : undefined);
 
   return (
     <div className={styles.Container} onClick={() => handleCheck()}>

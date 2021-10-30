@@ -11,7 +11,7 @@ export default function ProductItem() {
   const onMouseLeave = () => setIsHovered(false);
   return (
     <div
-      className={cn(styles.Container, isHovered && styles.Stroke)}
+      className={cn(styles.Container, isHovered ? styles.Stroke : undefined)}
       onMouseEnter={() => onMouseEnter()}
       onMouseLeave={() => onMouseLeave()}
     >

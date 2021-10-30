@@ -7,7 +7,7 @@ export default function ImageBox({ src, basketImg, productImg, isHovered }) {
   const productItemClasses = cn(
     styles.Container,
     styles.ProductItemImg,
-    isHovered && styles.Hovered
+    isHovered ? styles.Hovered : undefined
   );
   return (
     <>

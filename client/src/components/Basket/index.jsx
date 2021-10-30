@@ -29,10 +29,13 @@ export default function Basket() {
       // Unbind the event listener on clean up
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [isOpen, clickRef, setIsOpen]);
+  }, [isOpen, clickRef]);
 
-  const buttonClasses = cn(styles.Button, isOpen && styles.Open);
-  const countClasses = cn(styles.Count, count === 0 && styles.Hidden);
+  const buttonClasses = cn(styles.Button, isOpen ? styles.Open : undefined);
+  const countClasses = cn(
+    styles.Count,
+    count === 0 ? styles.Hidden : undefined
+  );
 
   return (
     <div ref={clickRef} className={styles.Container}>

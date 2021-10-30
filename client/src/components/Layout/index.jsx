@@ -17,7 +17,7 @@ export default function Layout() {
         </div>
         {showModal && <Modal />}
       </div>
-      <div className={showModal && styles.GrayLayer}></div>
+      <div className={showModal ? styles.GrayLayer : undefined}></div>
     </>
   );
 }
