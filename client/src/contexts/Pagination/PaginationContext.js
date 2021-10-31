@@ -5,7 +5,7 @@ const PaginationContext = createContext();
 export const PaginationProvider = ({ children }) => {
   const [page, setPage] = useState(1); // default page number
 
-  const values = {};
+  const values = { page, setPage };
 
   return (
     <PaginationContext.Provider value={values}>

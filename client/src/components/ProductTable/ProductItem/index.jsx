@@ -9,12 +9,12 @@ export default function ProductItem({ product }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const {
-    _id,
+    // _id,
     name,
     brand,
     color,
     price: { base, discountAmount },
-    createDate,
+    // createDate,
     imgUrl,
   } = product;
 
@@ -48,7 +48,9 @@ export default function ProductItem({ product }) {
               {calculateDiscountedPrice(base, discountAmount)}&nbsp;TL
             </span>
             <div className={styles.DiscountContainer}>
-              <span className={styles.DiscountedPrice}>{base}&nbsp;TL</span>
+              <span className={styles.DiscountedPrice}>
+                {parseFloat(base).toFixed(2)}&nbsp;TL
+              </span>
               <span className={styles.Discount}>{discountAmount}%</span>
             </div>
           </div>
