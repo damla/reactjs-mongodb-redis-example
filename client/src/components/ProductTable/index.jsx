@@ -36,7 +36,6 @@ export default function ProductTable() {
 
     rows.push(rowData);
   }
-  console.log(rows);
 
   return (
     <div className={styles.Container}>
@@ -52,6 +51,7 @@ export default function ProductTable() {
         })}
       </div>
       <Pagination
+        currentPage={currentPage}
         paginate={paginate}
         productsPerPage={productsPerPage}
         totalProducts={products.length}
