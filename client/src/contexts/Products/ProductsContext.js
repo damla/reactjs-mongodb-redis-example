@@ -4,8 +4,14 @@ import axios from "axios";
 const ProductsContext = createContext();
 
 export const ProductsProvider = ({ children }) => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState({
+    initial: [],
+    searched: [],
+    filtered: [],
+    sorted: [],
+  });
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
 
   // fetch all products
@@ -15,7 +21,12 @@ export const ProductsProvider = ({ children }) => {
       const res = await axios.get(
         `${process.env.REACT_APP_BACKEND_ENDPOINT}/products/all`
       );
-      setProducts(res.data);
+      setProducts({
+        initial: res.data,
+        searched: [],
+        filtered: [],
+        sorted: [],
+      });
       setLoading(false);
     };
     fetchPosts();
@@ -28,6 +39,8 @@ export const ProductsProvider = ({ children }) => {
     setLoading,
     filteredProducts,
     setFilteredProducts,
+    searchQuery,
+    setSearchQuery,
   };
 
   return (
