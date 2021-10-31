@@ -2,12 +2,12 @@
 import styles from "./styles.module.scss";
 import cn from "classnames";
 
-export default function ImageBox({ src, basketImg, productImg, isHovered }) {
+export default function ImageBox({ basketImg, productImg, isHovered }) {
   const basketItemClasses = cn(styles.Container, styles.BasketItemImg);
   const productItemClasses = cn(
     styles.Container,
     styles.ProductItemImg,
-    isHovered && styles.Hovered
+    isHovered ? styles.Hovered : undefined
   );
   return (
     <>
@@ -24,12 +24,7 @@ export default function ImageBox({ src, basketImg, productImg, isHovered }) {
 
       {productImg && (
         <div className={productItemClasses}>
-          <img
-            src={`${process.env.REACT_APP_IMAGE_URL}s/32/224-332/10352817012786.jpg`}
-            width="224"
-            height="332"
-            alt="product"
-          />
+          <img src={productImg} width="224" height="332" alt="product" />
         </div>
       )}
     </>

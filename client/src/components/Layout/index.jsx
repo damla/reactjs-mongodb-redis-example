@@ -11,13 +11,13 @@ export default function Layout() {
       <div className={styles.Container}>
         <Header />
         <SubHeader />
-        <div className={styles.Wrapper}>
+        <main className={styles.Wrapper}>
           <Sidebar />
           <Section />
-        </div>
+        </main>
         {showModal && <Modal />}
       </div>
-      <div className={showModal && styles.GrayLayer}></div>
+      <div className={showModal ? styles.GrayLayer : undefined}></div>
     </>
   );
 }

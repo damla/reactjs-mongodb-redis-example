@@ -10,13 +10,13 @@ export default function AddButton() {
 
   return isActive ? (
     <button
-      className={isActive && styles.ActiveButton}
+      className={isActive ? styles.ActiveButton : undefined}
       onClick={() => handleActive()}
     >
       Sepete Ekle
     </button>
   ) : (
-    <button className={!isActive && styles.DeactiveButton}>
+    <button className={!isActive ? styles.DeactiveButton : undefined}>
       Bu ürünü sepete ekleyemezsiniz.
     </button>
   );

@@ -28,7 +28,7 @@ export default function SelectBox() {
     };
   }, [isOpen, clickRef]);
 
-  const menuClasses = cn(styles.Menu, isOpen && styles.Open);
+  const menuClasses = cn(styles.Menu, isOpen ? styles.Open : undefined);
 
   return (
     <div
