@@ -29,7 +29,7 @@ export default function Search() {
       setProducts({
         initial: products.initial,
         searched: searchedProducts,
-        filtered: [],
+        filtered: { brandKeys: [], colorKeys: [] },
         sorted: [],
       });
       setSearchQuery(searchField.query);

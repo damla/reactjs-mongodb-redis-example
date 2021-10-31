@@ -23,4 +23,3 @@ export default function BasketItem() {
     </div>
   );
 }
-// TODO: SCROLLU TRANSPARENT YAP

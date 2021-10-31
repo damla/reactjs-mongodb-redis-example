@@ -7,16 +7,17 @@ export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState({
     initial: [],
     searched: [],
-    filtered: [],
+    filtered: { brandKeys: [], colorKeys: [] },
     sorted: [],
   });
+
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
 
   // fetch all products
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchProducts = async () => {
       setLoading(true);
       const res = await axios.get(
         `${process.env.REACT_APP_BACKEND_ENDPOINT}/products/all`
@@ -24,12 +25,12 @@ export const ProductsProvider = ({ children }) => {
       setProducts({
         initial: res.data,
         searched: [],
-        filtered: [],
+        filtered: { brandKeys: [], colorKeys: [] },
         sorted: [],
       });
       setLoading(false);
     };
-    fetchPosts();
+    fetchProducts();
   }, []);
 
   const values = {

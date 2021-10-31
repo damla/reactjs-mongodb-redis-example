@@ -2,9 +2,8 @@ import styles from "./styles.module.scss";
 import { useProducts } from "../../contexts/Products/ProductsContext";
 
 export default function PageInfo() {
-  const { searchQuery, products } = useProducts();
+  const { searchQuery } = useProducts();
 
-  console.log("searched data", products.searched);
   return (
     <div className={styles.Container}>
       <h1 className={styles.PageTitle}>Arama Sonuçları</h1>

@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home, Error } from "./pages";
 import { ProductsProvider } from "./contexts/Products/ProductsContext";
-import { PaginationProvider } from "./contexts/Pagination/PaginationContext";
 import { BasketProvider } from "./contexts/Basket/BasketContext";
+import { FiltersProvider } from "./contexts/Filters/FiltersContext";
 
 function App() {
   return (
     <ProductsProvider>
-      <PaginationProvider>
+      <FiltersProvider>
         <BasketProvider>
           <Router>
             <Switch>
@@ -16,7 +16,7 @@ function App() {
             </Switch>
           </Router>
         </BasketProvider>
-      </PaginationProvider>
+      </FiltersProvider>
     </ProductsProvider>
   );
 }
