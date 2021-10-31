@@ -2,7 +2,7 @@
 import styles from "./styles.module.scss";
 import cn from "classnames";
 
-export default function ImageBox({ src, basketImg, productImg, isHovered }) {
+export default function ImageBox({ basketImg, productImg, isHovered }) {
   const basketItemClasses = cn(styles.Container, styles.BasketItemImg);
   const productItemClasses = cn(
     styles.Container,

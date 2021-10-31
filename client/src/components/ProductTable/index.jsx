@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { BasketItem, Pagination } from "..";
-import { ProductRow, ProductItem } from "..";
+import { ProductRow, ProductItem, Pagination } from "..";
 import { useProducts } from "../../contexts/Products/ProductsContext";
 // import { usePagination } from "../../contexts/Pagination/PaginationContext";
 import styles from "./styles.module.scss";
@@ -26,8 +25,8 @@ export default function ProductTable() {
   );
 
   let rows = [];
-  for (let i = 0; i < rowCount; i++) {
-    let indexOfLastProduct = i + 1 * productsPerRow;
+  for (let i = 1; i <= rowCount; i++) {
+    let indexOfLastProduct = i * productsPerRow;
     let indexOfFirstProduct = indexOfLastProduct - productsPerRow;
 
     let rowData = currentProducts.slice(
