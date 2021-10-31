@@ -2,10 +2,7 @@ const seedData = {
   products: {
     list: [
       {
-        price: {
-          base: 880.99,
-          discountAmount: 12,
-        },
+        price: { base: 880.99, discountAmount: 12 },
         _id: "61770c6bcba406652577d0e8",
         name: "iPhone 11 Pro Max",
         color: "Siyah",
@@ -14,10 +11,7 @@ const seedData = {
         imgUrl: "s/32/224-332/10352817012786",
       },
       {
-        price: {
-          base: 680.99,
-          discountAmount: 2,
-        },
+        price: { base: 680.99, discountAmount: 2 },
         _id: "6178304babc140e64afdf897",
         name: "iPhone 11",
         color: "Siyah",
@@ -26,10 +20,7 @@ const seedData = {
         imgUrl: "s/49/224-332/10986386817074",
       },
       {
-        price: {
-          base: 550.5,
-          discountAmount: 0,
-        },
+        price: { base: 550.5, discountAmount: 12 },
         _id: "6178320aabc140e64afdf898",
         name: "Galaxy M31s",
         color: "Siyah",
@@ -38,10 +29,7 @@ const seedData = {
         imgUrl: "s/44/224-332/10769576230962",
       },
       {
-        price: {
-          base: 450.99,
-          discountAmount: 12,
-        },
+        price: { base: 450.99, discountAmount: 12 },
         _id: "61783293abc140e64afdf899",
         name: "Galaxy M12",
         color: "Siyah",
@@ -50,10 +38,7 @@ const seedData = {
         imgUrl: "s/78/224-332/110000020465798",
       },
       {
-        price: {
-          base: 200.39,
-          discountAmount: 0,
-        },
+        price: { base: 200.39, discountAmount: 2 },
         _id: "61783402abc140e64afdf89a",
         name: "515",
         color: "Siyah",
@@ -62,10 +47,7 @@ const seedData = {
         imgUrl: "s/10/224-332/9196625068082",
       },
       {
-        price: {
-          base: 300.99,
-          discountAmount: 0,
-        },
+        price: { base: 300.99, discountAmount: 10 },
         _id: "61783451abc140e64afdf89b",
         name: "6700 Classic",
         color: "Siyah",
@@ -74,10 +56,7 @@ const seedData = {
         imgUrl: "s/10/224-332/9196627230770",
       },
       {
-        price: {
-          base: 700.99,
-          discountAmount: 12,
-        },
+        price: { base: 700.99, discountAmount: 12 },
         _id: "6178349aabc140e64afdf89c",
         name: "Mi 11 Lite",
         color: "Siyah",
@@ -86,10 +65,7 @@ const seedData = {
         imgUrl: "s/75/224-332/110000017456154",
       },
       {
-        price: {
-          base: 650.99,
-          discountAmount: 0,
-        },
+        price: { base: 650.99, discountAmount: 2 },
         _id: "617835d1abc140e64afdf89d",
         name: "K10",
         color: "Siyah",
@@ -98,10 +74,7 @@ const seedData = {
         imgUrl: "s/3/224-332/9604780490802",
       },
       {
-        price: {
-          base: 840.5,
-          discountAmount: 12,
-        },
+        price: { base: 840.5, discountAmount: 12 },
         _id: "61783668abc140e64afdf89e",
         name: "Q7 Plus",
         color: "Siyah",
@@ -110,10 +83,7 @@ const seedData = {
         imgUrl: "s/20/224-332/9873773723698",
       },
       {
-        price: {
-          base: 650.5,
-          discountAmount: 0,
-        },
+        price: { base: 650.5, discountAmount: 12 },
         _id: "61783742abc140e64afdf89f",
         name: "GM 20",
         color: "Siyah",
@@ -122,22 +92,16 @@ const seedData = {
         imgUrl: "s/42/224-332/10730020732978",
       },
       {
-        price: {
-          base: 780,
-          discountAmount: 12,
-        },
+        price: { base: 780, discountAmount: 12 },
         _id: "61783794abc140e64afdf8a0",
-        name: "Gm 21 ",
+        name: "GM 21",
         color: "Siyah",
         brand: "General Mobile",
         createDate: "2021-07-30T07:16:30.736Z",
         imgUrl: "s/82/224-332/110000024969882",
       },
       {
-        price: {
-          base: 700,
-          discountAmount: 0,
-        },
+        price: { base: 700, discountAmount: 12 },
         _id: "617837e2abc140e64afdf8a1",
         name: "GM 20 Dual Sim",
         color: "Siyah",
@@ -146,10 +110,7 @@ const seedData = {
         imgUrl: "s/42/224-332/10730021126194",
       },
       {
-        price: {
-          base: 880.99,
-          discountAmount: 12,
-        },
+        price: { base: 880.99, discountAmount: 12 },
         _id: "61783933abc140e64afdf8a2",
         name: "iPhone 11 Pro Max",
         color: "Lacivert",
@@ -158,10 +119,7 @@ const seedData = {
         imgUrl: "s/76/224-332/110000018213486",
       },
       {
-        price: {
-          base: 80.99,
-          discountAmount: 0,
-        },
+        price: { base: 80.99, discountAmount: 2 },
         _id: "61783affabc140e64afdf8a3",
         name: "iPhone 11 Kılıf",
         color: "Lacivert",
@@ -170,10 +128,7 @@ const seedData = {
         imgUrl: "s/58/224-332/11337222651954",
       },
       {
-        price: {
-          base: 880.99,
-          discountAmount: 12,
-        },
+        price: { base: 880.99, discountAmount: 12 },
         _id: "61790f90abc140e64afdf8d2",
         name: "iPhone 12 Mini",
         color: "Lacivert",
@@ -182,10 +137,7 @@ const seedData = {
         imgUrl: "s/76/224-332/110000018213526",
       },
       {
-        price: {
-          base: 980.99,
-          discountAmount: 0,
-        },
+        price: { base: 980.99, discountAmount: 12 },
         _id: "617910f9abc140e64afdf8d3",
         name: "iPhone 13 Pro",
         color: "Mavi",
@@ -194,10 +146,7 @@ const seedData = {
         imgUrl: "s/119/224-332/110000068435120",
       },
       {
-        price: {
-          base: 550.5,
-          discountAmount: 0,
-        },
+        price: { base: 550.5, discountAmount: 2 },
         _id: "6179143aabc140e64afdf8e0",
         name: "GM 20",
         color: "Mavi",
@@ -206,10 +155,7 @@ const seedData = {
         imgUrl: "s/50/224-332/11030220210226",
       },
       {
-        price: {
-          base: 550.5,
-          discountAmount: 0,
-        },
+        price: { base: 550.5, discountAmount: 2 },
         _id: "61791539abc140e64afdf8e3",
         name: "GM 20",
         color: "Kırmızı",
@@ -218,10 +164,7 @@ const seedData = {
         imgUrl: "s/50/224-332/11030220046386",
       },
       {
-        price: {
-          base: 550.5,
-          discountAmount: 0,
-        },
+        price: { base: 550.5, discountAmount: 12 },
         _id: "61791622abc140e64afdf8e6",
         name: "GM 20",
         color: "Mavi",
@@ -230,10 +173,7 @@ const seedData = {
         imgUrl: "s/42/224-332/10730020864050",
       },
       {
-        price: {
-          base: 650.5,
-          discountAmount: 0,
-        },
+        price: { base: 650.5, discountAmount: 2 },
         _id: "61791701abc140e64afdf8e9",
         name: "GM  21 ",
         color: "Lacivert",
@@ -242,10 +182,7 @@ const seedData = {
         imgUrl: "s/82/224-332/110000024969877",
       },
       {
-        price: {
-          base: 650.5,
-          discountAmount: 0,
-        },
+        price: { base: 650.5, discountAmount: 12 },
         _id: "6179177aabc140e64afdf8ec",
         name: "GM  21 ",
         color: "Mavi",
@@ -254,10 +191,7 @@ const seedData = {
         imgUrl: "s/82/224-332/110000024969880",
       },
       {
-        price: {
-          base: 500,
-          discountAmount: 0,
-        },
+        price: { base: 500, discountAmount: 2 },
         _id: "61791831abc140e64afdf8ef",
         name: "GM 20 Dual Sim",
         color: "Lacivert",
@@ -266,10 +200,7 @@ const seedData = {
         imgUrl: "s/42/224-332/10730021257266",
       },
       {
-        price: {
-          base: 500,
-          discountAmount: 0,
-        },
+        price: { base: 500, discountAmount: 12 },
         _id: "617918c3abc140e64afdf8f2",
         name: "GM 20 Dual Sim",
         color: "Mavi",
@@ -278,10 +209,7 @@ const seedData = {
         imgUrl: "s/42/224-332/10730021257266",
       },
       {
-        price: {
-          base: 500,
-          discountAmount: 0,
-        },
+        price: { base: 500, discountAmount: 12 },
         _id: "61791b68abc140e64afdf8f5",
         name: "GM 20 Dual Sim",
         color: "Kırmızı",
@@ -290,10 +218,7 @@ const seedData = {
         imgUrl: "s/42/224-332/10730021257266",
       },
       {
-        price: {
-          base: 250,
-          discountAmount: 12,
-        },
+        price: { base: 250, discountAmount: 12 },
         _id: "61791eafabc140e64afdf8f8",
         name: "iPhone 11 Kırmızı Kılıf",
         color: "Kırmızı",
@@ -302,10 +227,7 @@ const seedData = {
         imgUrl: "s/44/224-332/10804866154546",
       },
       {
-        price: {
-          base: 410,
-          discountAmount: 0,
-        },
+        price: { base: 410, discountAmount: 12 },
         _id: "6179239dabc140e64afdf8fb",
         name: "E1190",
         color: "Kırmızı",
@@ -314,10 +236,7 @@ const seedData = {
         imgUrl: "s/10/224-332/9190457868338",
       },
       {
-        price: {
-          base: 680.99,
-          discountAmount: 2,
-        },
+        price: { base: 680.99, discountAmount: 2 },
         _id: "6179241fabc140e64afdf8fd",
         name: "iPhone 11",
         color: "Sarı",
@@ -326,10 +245,7 @@ const seedData = {
         imgUrl: "s/49/224-332/10986387505202",
       },
       {
-        price: {
-          base: 300.99,
-          discountAmount: 0,
-        },
+        price: { base: 300.99, discountAmount: 5 },
         _id: "6179271eabc140e64afdf8fe",
         name: "P9 Lite",
         color: "Sarı",
@@ -338,10 +254,7 @@ const seedData = {
         imgUrl: "s/5/224-332/9679265923122",
       },
       {
-        price: {
-          base: 600.99,
-          discountAmount: 0,
-        },
+        price: { base: 600.99, discountAmount: 12 },
         _id: "61792813abc140e64afdf901",
         name: "K10 2017",
         color: "Sarı",
@@ -350,10 +263,7 @@ const seedData = {
         imgUrl: "s/3/224-332/9604780490802",
       },
       {
-        price: {
-          base: 700,
-          discountAmount: 0,
-        },
+        price: { base: 700, discountAmount: 12 },
         _id: "61792a27abc140e64afdf902",
         name: "Galaxy M31s",
         color: "Mavi",
@@ -362,10 +272,7 @@ const seedData = {
         imgUrl: "s/44/224-332/10769576230962",
       },
       {
-        price: {
-          base: 500,
-          discountAmount: 0,
-        },
+        price: { base: 500, discountAmount: 12 },
         _id: "61792bc4abc140e64afdf905",
         name: "Galaxy M12",
         color: "Mavi",
@@ -374,10 +281,7 @@ const seedData = {
         imgUrl: "s/78/224-332/110000020465798",
       },
       {
-        price: {
-          base: 760,
-          discountAmount: 0,
-        },
+        price: { base: 760, discountAmount: 2 },
         _id: "61792c29abc140e64afdf906",
         name: "Mi 11 Lite",
         color: "Mavi",
@@ -386,10 +290,7 @@ const seedData = {
         imgUrl: "s/75/224-332/110000017456160",
       },
       {
-        price: {
-          base: 600,
-          discountAmount: 0,
-        },
+        price: { base: 600, discountAmount: 2 },
         _id: "61792c90abc140e64afdf907",
         name: "Redmi 9T",
         color: "Mavi",
@@ -398,10 +299,7 @@ const seedData = {
         imgUrl: "s/83/224-332/110000025441093",
       },
       {
-        price: {
-          base: 470,
-          discountAmount: 0,
-        },
+        price: { base: 470, discountAmount: 12 },
         _id: "61792d61abc140e64afdf908",
         name: "K8",
         color: "Mavi",
@@ -410,16 +308,22 @@ const seedData = {
         imgUrl: "s/6/224-332/9713695490098",
       },
       {
-        price: {
-          base: 370,
-          discountAmount: 0,
-        },
+        price: { base: 370, discountAmount: 12 },
         _id: "61792deeabc140e64afdf909",
         name: "K40S",
         color: "Mavi",
         brand: "LG",
         createDate: "2016-05-21T09:16:39.736Z",
         imgUrl: "s/36/224-332/10503176028210",
+      },
+      {
+        price: { base: 88.5, discountAmount: 2 },
+        _id: "617e8e7f0277553c62c7e281",
+        name: "iPhone 11 Kılıf",
+        color: "Sarı",
+        brand: "Apple",
+        createDate: "2021-03-22T10:15:39.736Z",
+        imgUrl: "s/44/224-332/10804865859634",
       },
     ],
   },
@@ -437,6 +341,7 @@ const seedData = {
           "617910f9abc140e64afdf8d3",
           "61791eafabc140e64afdf8f8",
           "6179241fabc140e64afdf8fd",
+          "617e8e7f0277553c62c7e281",
         ],
       },
       {
@@ -504,6 +409,7 @@ const seedData = {
       "61783933abc140e64afdf8a2",
       "6179241fabc140e64afdf8fd",
       "61790f90abc140e64afdf8d2",
+      "617e8e7f0277553c62c7e281",
     ],
     samsungProductIds: [
       "61792bc4abc140e64afdf905",
@@ -586,6 +492,7 @@ const seedData = {
           "6179241fabc140e64afdf8fd",
           "6179271eabc140e64afdf8fe",
           "61792813abc140e64afdf901",
+          "617e8e7f0277553c62c7e281",
         ],
       },
       {
@@ -635,6 +542,7 @@ const seedData = {
     ],
     sariProductIds: [
       "6179271eabc140e64afdf8fe",
+      "617e8e7f0277553c62c7e281",
       "61792813abc140e64afdf901",
       "6179241fabc140e64afdf8fd",
     ],
