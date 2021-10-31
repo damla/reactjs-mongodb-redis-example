@@ -19,10 +19,19 @@ export default function ProductTable() {
   // Get current products
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-  const currentProducts = products.slice(
-    indexOfFirstProduct,
-    indexOfLastProduct
-  );
+
+  let data = products.initial;
+
+  if (products.searched.length > 0) {
+    data = products.searched;
+  } else if (products.filtered.length > 0) {
+    data = products.filtered;
+  }
+  // else if (products.sorted){ // true false kontrolu lazim
+  //   data = products.sorted;
+  // }
+
+  let currentProducts = data.slice(indexOfFirstProduct, indexOfLastProduct);
 
   let rows = [];
   for (let i = 1; i <= rowCount; i++) {
@@ -36,12 +45,12 @@ export default function ProductTable() {
 
     rows.push(rowData);
   }
-  console.log(rows);
 
   return (
     <div className={styles.Container}>
       <div className={styles.Table}>
         {rows.map((items, i) => {
+          if (items.length === 0) return <></>;
           return (
             <ProductRow key={i}>
               {items.map((item, i) => {
@@ -52,9 +61,10 @@ export default function ProductTable() {
         })}
       </div>
       <Pagination
+        currentPage={currentPage}
         paginate={paginate}
         productsPerPage={productsPerPage}
-        totalProducts={products.length}
+        totalProducts={data.length}
       />
     </div>
   );

@@ -5,7 +5,7 @@ import { useProducts } from "../../contexts/Products/ProductsContext";
 
 export default function Search() {
   const [searchField, setSearchField] = useState({ query: "" });
-  const { products, setFilteredProducts } = useProducts();
+  const { products, setProducts, setSearchQuery } = useProducts();
 
   const handleChange = (event) => {
     setSearchField({ query: event.target.value });
@@ -16,10 +16,24 @@ export default function Search() {
       console.error("Input is not valid.");
       return;
     } else {
-      const filteredProducts = products.filter((product) =>
-        product.name.toLowerCase().includes(searchField.query.toLowerCase())
+      const searchedProducts = products.initial.filter(
+        (product) =>
+          product.name
+            .toLowerCase()
+            .includes(searchField.query.toLowerCase()) ||
+          product.name
+            .toLowerCase()
+            .replace(" ", "")
+            .includes(searchField.query.toLowerCase())
       );
-      setFilteredProducts(filteredProducts);
+      setProducts({
+        initial: products.initial,
+        searched: searchedProducts,
+        filtered: [],
+        sorted: [],
+      });
+      setSearchQuery(searchField.query);
+      setSearchField({ query: "" });
     }
   };
 
@@ -34,6 +48,7 @@ export default function Search() {
         placeholder="25 milyon'dan fazla ürün içerisinde ara"
         onChange={handleChange}
         onKeyPress={(event) => event.key === "Enter" && search()}
+        value={searchField.query}
       />
     </div>
   );

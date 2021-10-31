@@ -3,7 +3,7 @@
 .Container {
   display: flex;
   align-items: center;
-  margin-top: 39px;
+  margin-top: 22px;
 
   .Button {
     cursor: pointer;
@@ -22,5 +22,9 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+
+  .Stroke {
+    border: 1px solid vars.$stroke-border-color;
   }
 }

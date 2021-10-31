@@ -9,16 +9,13 @@ export default function ProductItem({ product }) {
   const [isHovered, setIsHovered] = useState(false);
 
   const {
-    // _id,
     name,
     brand,
     color,
     price: { base, discountAmount },
-    // createDate,
     imgUrl,
   } = product;
 
-  console.log(product);
   const onMouseEnter = () => setIsHovered(true);
   const onMouseLeave = () => setIsHovered(false);
   return (
