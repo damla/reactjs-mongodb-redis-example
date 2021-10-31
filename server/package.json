@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "mocha --recursive --exit && node app.js",
+    "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "mocha --recursive --exit"
   },
