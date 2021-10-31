@@ -18,7 +18,6 @@ export const ProductsProvider = ({ children }) => {
       setProducts(res.data);
       setLoading(false);
     };
-
     fetchPosts();
   }, []);
 
@@ -38,5 +37,5 @@ export const ProductsProvider = ({ children }) => {
   );
 };
 
-// creayed custom hook
+// created custom hook
 export const useProducts = () => useContext(ProductsContext);
