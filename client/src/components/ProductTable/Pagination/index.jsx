@@ -1,5 +1,6 @@
 import styles from "./styles.module.scss";
-
+import cn from "classnames";
+// current = number
 export default function Pagination({
   totalProducts,
   productsPerPage,
@@ -7,7 +8,6 @@ export default function Pagination({
   currentPage,
 }) {
   const pageNumbers = [];
-
   const current = currentPage;
 
   for (let i = 1; i <= Math.ceil(totalProducts / productsPerPage); i++) {
@@ -26,7 +26,10 @@ export default function Pagination({
         <button
           key={number}
           onClick={() => paginate(number)}
-          className={styles.Button}
+          className={cn(
+            styles.Button,
+            currentPage === number ? styles.Stroke : undefined
+          )}
         >
           {number}
         </button>

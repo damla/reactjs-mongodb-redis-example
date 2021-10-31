@@ -23,4 +23,8 @@
       margin-right: 0;
     }
   }
+
+  .Stroke {
+    border: 1px solid vars.$stroke-border-color;
+  }
 }
