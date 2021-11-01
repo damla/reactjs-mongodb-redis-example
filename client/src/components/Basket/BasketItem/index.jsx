@@ -6,7 +6,7 @@ export default function BasketItem({ productId }) {
   const { activateModal } = useModal();
 
   let product = JSON.parse(localStorage.getItem(productId));
-  console.log("product", product);
+
   return (
     <div className={styles.Container}>
       <ImageBox

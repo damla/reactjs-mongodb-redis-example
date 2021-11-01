@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { ProductRow, ProductItem, Pagination } from "..";
 import { useProducts } from "../../contexts/Products/ProductsContext";
 // import { usePagination } from "../../contexts/Pagination/PaginationContext";
@@ -26,10 +26,9 @@ export default function ProductTable() {
     data = products.searched;
   } else if (products.filtered.length > 0) {
     data = products.filtered;
+  } else if (products.sorted.length > 0) {
+    data = products.sorted;
   }
-  // else if (products.sorted){ // true false kontrolu lazim
-  //   data = products.sorted;
-  // }
 
   let currentProducts = data.slice(indexOfFirstProduct, indexOfLastProduct);
 
@@ -50,11 +49,11 @@ export default function ProductTable() {
     <div className={styles.Container}>
       <div className={styles.Table}>
         {rows.map((items, i) => {
-          if (items.length === 0) return <></>;
+          if (items.length === 0) return <Fragment key={i}></Fragment>;
           return (
             <ProductRow key={i}>
-              {items.map((item, j) => {
-                return <ProductItem key={j} product={item} />;
+              {items.map((item) => {
+                return <ProductItem key={item._id} product={item} />;
               })}
             </ProductRow>
           );

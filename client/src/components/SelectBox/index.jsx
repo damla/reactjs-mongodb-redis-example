@@ -41,10 +41,10 @@ export default function SelectBox() {
         <img src={DownArrowIcon} width="11" alt="down-arrow" />
       </div>
       <div className={menuClasses}>
-        <SelectBoxItem selection="En Düşük Fiyat" />
-        <SelectBoxItem selection="En Yüksek Fiyat" />
-        <SelectBoxItem selection="En Yeniler (A&gt;Z)" />
-        <SelectBoxItem selection="En Yeniler (Z&gt;A)" />
+        <SelectBoxItem selection="En Düşük Fiyat" sortingType="lessToMore" />
+        <SelectBoxItem selection="En Yüksek Fiyat" sortingType="moreToLess" />
+        <SelectBoxItem selection="En Yeniler (A&gt;Z)" sortingType="aToZ" />
+        <SelectBoxItem selection="En Yeniler (Z&gt;A)" sortingType="zToA" />
       </div>
     </div>
   );

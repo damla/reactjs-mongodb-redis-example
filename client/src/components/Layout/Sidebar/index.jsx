@@ -4,7 +4,6 @@ import { useFilters } from "../../../contexts/Filters/FiltersContext";
 
 export default function Sidebar() {
   const { brands, loadingBrands, colors, loadingColors } = useFilters();
-
   if (loadingBrands || loadingColors) return <div>Loading...</div>;
 
   return (
@@ -21,10 +20,10 @@ export default function Sidebar() {
         })}
       </LinkList>
       <LinkList filterTitle="Sıralama">
-        <Link filterName="En Düşük Fiyat" />
-        <Link filterName="En Yüksek Fiyat" />
-        <Link filterName="En Yeniler (A>Z)" />
-        <Link filterName="En Yeniler (Z>A)" />
+        <Link filterName="En Düşük Fiyat" sortingType="lessToMore" />
+        <Link filterName="En Yüksek Fiyat" sortingType="moreToLess" />
+        <Link filterName="En Yeniler (A>Z)" sortingType="aToZ" />
+        <Link filterName="En Yeniler (Z>A)" sortingType="zToA" />
       </LinkList>
       <LinkList filterTitle="Marka">
         {brands.map((brand, i) => {
