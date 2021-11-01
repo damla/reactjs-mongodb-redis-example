@@ -1,10 +1,8 @@
 import styles from "./styles.module.scss";
 import { ImageBox } from "../..";
-import { useBasket } from "../../../contexts/Basket/BasketContext";
 import { useModal } from "../../../contexts/Modal/ModalContext";
 
 export default function BasketItem({ productId }) {
-  const { removeItem } = useBasket();
   const { activateModal } = useModal();
 
   let product = JSON.parse(localStorage.getItem(productId));

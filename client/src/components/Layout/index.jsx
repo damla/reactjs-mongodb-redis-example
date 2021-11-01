@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Header, SubHeader, Sidebar, Section, Modal } from "..";
 import cn from "classnames";
 import styles from "./styles.module.scss";

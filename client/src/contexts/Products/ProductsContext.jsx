@@ -7,10 +7,10 @@ export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState({
     initial: [],
     searched: [],
-    filtered: { brandKeys: [], colorKeys: [] },
+    filtered: [],
     sorted: [],
   });
-
+  const [filters, setFilters] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [loading, setLoading] = useState(true);
@@ -25,7 +25,7 @@ export const ProductsProvider = ({ children }) => {
       setProducts({
         initial: res.data,
         searched: [],
-        filtered: { brandKeys: [], colorKeys: [] },
+        filtered: [],
         sorted: [],
       });
       setLoading(false);
@@ -38,6 +38,8 @@ export const ProductsProvider = ({ children }) => {
     setProducts,
     loading,
     setLoading,
+    filters,
+    setFilters,
     filteredProducts,
     setFilteredProducts,
     searchQuery,
