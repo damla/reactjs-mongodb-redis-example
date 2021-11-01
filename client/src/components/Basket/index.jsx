@@ -2,11 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import cn from "classnames";
 import styles from "./styles.module.scss";
 import { BasketDetails } from "..";
-// import { useBasket } from "../../contexts/Basket/BasketContext";
+import { useBasket } from "../../contexts/Basket/BasketContext";
 
 export default function Basket() {
   const [isOpen, setIsOpen] = useState(false);
-  const [count] = useState(4);
+  const { count } = useBasket();
   const clickRef = useRef(null);
 
   const openCart = () => {

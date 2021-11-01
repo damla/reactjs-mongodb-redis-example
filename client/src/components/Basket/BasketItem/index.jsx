@@ -1,26 +1,27 @@
-// import React, { useState } from "react";
-// import cn from "classnames";
 import styles from "./styles.module.scss";
 import { ImageBox } from "../..";
+import { useModal } from "../../../contexts/Modal/ModalContext";
 
-export default function BasketItem() {
-  // const [items, setItems] = useState([{ name: "iPhone11", url: "image" }]);
+export default function BasketItem({ productId }) {
+  const { activateModal } = useModal();
 
+  let product = JSON.parse(localStorage.getItem(productId));
+  console.log("product", product);
   return (
     <div className={styles.Container}>
       <ImageBox
-        src={`${process.env.REACT_APP_IMAGE_URL}s/32/224-332/10352817012786.jpg`}
-        basketImg
+        basketImg={`${process.env.REACT_APP_IMAGE_URL}${product.imgUrl}.jpg`}
       />
       <div className={styles.Wrapper}>
-        <span className={styles.ItemName}>
-          iPhone 11 Kırmızı Kılıflı Garantili Telefon
-        </span>
-        <button type="button" className={styles.RemoveButton}>
+        <span className={styles.ItemName}>{product.name}</span>
+        <button
+          type="button"
+          className={styles.RemoveButton}
+          onClick={() => activateModal(productId)}
+        >
           Kaldır
         </button>
       </div>
     </div>
   );
 }
-// TODO: SCROLLU TRANSPARENT YAP

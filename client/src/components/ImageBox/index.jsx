@@ -13,12 +13,7 @@ export default function ImageBox({ basketImg, productImg, isHovered }) {
     <>
       {basketImg && (
         <div className={basketItemClasses}>
-          <img
-            src={`${process.env.REACT_APP_IMAGE_URL}s/32/224-332/10352817012786.jpg`}
-            width="40"
-            height="59.23"
-            alt="basket-item"
-          />
+          <img src={basketImg} width="40" height="59.23" alt="basket-item" />
         </div>
       )}
 

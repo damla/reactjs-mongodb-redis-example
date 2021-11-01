@@ -8,7 +8,13 @@
   line-height: 24px;
   color: vars.$link-color;
   cursor: pointer;
+  &:hover {
+    color: vars.$primary-font-color;
+  }
+}
 
+.Active {
+  color: vars.$hover-link-color;
   &:hover {
     color: vars.$hover-link-color;
   }

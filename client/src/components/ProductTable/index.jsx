@@ -53,8 +53,8 @@ export default function ProductTable() {
           if (items.length === 0) return <></>;
           return (
             <ProductRow key={i}>
-              {items.map((item, i) => {
-                return <ProductItem key={i} product={item} />;
+              {items.map((item, j) => {
+                return <ProductItem key={j} product={item} />;
               })}
             </ProductRow>
           );

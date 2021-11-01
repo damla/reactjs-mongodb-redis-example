@@ -3,12 +3,25 @@ import { createContext, useState, useContext } from "react";
 const BasketContext = createContext();
 
 export const BasketProvider = ({ children }) => {
-  // initiliazed with static data
-  const [isOpen, setIsOpen] = useState("");
+  const [count, setCount] = useState(localStorage.length);
+
+  // add id - value pair
+  const addItem = (item) => {
+    localStorage.setItem(item._id, JSON.stringify(item));
+    setCount((c) => c + 1);
+  };
+
+  // remove item by using id value
+  const removeItem = (id) => {
+    localStorage.removeItem(id);
+    setCount((c) => c - 1);
+  };
 
   const values = {
-    isOpen,
-    setIsOpen,
+    addItem,
+    removeItem,
+    count,
+    setCount,
   };
 
   return (
@@ -16,5 +29,4 @@ export const BasketProvider = ({ children }) => {
   );
 };
 
-// creayed custom hook
 export const useBasket = () => useContext(BasketContext);

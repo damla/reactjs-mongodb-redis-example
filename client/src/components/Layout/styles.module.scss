@@ -9,6 +9,10 @@
   width: 100vw;
   position: relative;
 
+  &.OverflowHidden {
+    overflow-y: hidden;
+  }
+
   .Wrapper {
     display: flex;
     min-width: vars.$desktop-width;

@@ -354,6 +354,7 @@ const seedData = {
           "61792bc4abc140e64afdf905",
           "61792c29abc140e64afdf906",
           "61792c90abc140e64afdf907",
+          "61792a27abc140e64afdf902",
         ],
       },
       {
@@ -418,6 +419,7 @@ const seedData = {
       "61783293abc140e64afdf899",
       "61792c90abc140e64afdf907",
       "61792c29abc140e64afdf906",
+      "61792a27abc140e64afdf902",
     ],
     nokiaProductIds: ["61783451abc140e64afdf89b", "61783402abc140e64afdf89a"],
     lgProductIds: [
