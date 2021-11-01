@@ -12,16 +12,5 @@
   background-color: #ffff;
   border: 1px solid vars.$border-color;
   border-radius: 4px;
-  // TODO: Overflow
-
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 118px;
-    top: -2px;
-    right: 0;
-    z-index: 3;
-    border: 2px solid #ffff;
-  }
+  overflow-y: scroll;
 }

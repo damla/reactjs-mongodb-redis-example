@@ -1,22 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
+import { useBasket } from "../../contexts/Basket/BasketContext";
 import styles from "./styles.module.scss";
 
-export default function AddButton() {
-  const [isActive, setIsActive] = useState(true);
+export default function AddButton({ product, onClick }) {
+  const { addItem } = useBasket();
 
-  const handleActive = () => {
-    setIsActive(false);
-  };
+  const checkBasket = () => !Object.keys(localStorage).includes(product._id);
 
-  return isActive ? (
+  return checkBasket() ? (
     <button
-      className={isActive ? styles.ActiveButton : undefined}
-      onClick={() => handleActive()}
+      className={styles.ActiveButton}
+      onClick={() => {
+        addItem(product);
+      }}
     >
       Sepete Ekle
     </button>
   ) : (
-    <button className={!isActive ? styles.DeactiveButton : undefined}>
+    <button className={styles.DeactiveButton}>
       Bu ürünü sepete ekleyemezsiniz.
     </button>
   );

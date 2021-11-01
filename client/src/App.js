@@ -6,8 +6,8 @@ import { FiltersProvider } from "./contexts/Filters/FiltersContext";
 
 function App() {
   return (
-    <ProductsProvider>
-      <FiltersProvider>
+    <FiltersProvider>
+      <ProductsProvider>
         <BasketProvider>
           <Router>
             <Switch>
@@ -16,8 +16,8 @@ function App() {
             </Switch>
           </Router>
         </BasketProvider>
-      </FiltersProvider>
-    </ProductsProvider>
+      </ProductsProvider>
+    </FiltersProvider>
   );
 }
 

@@ -3,14 +3,13 @@ import styles from "./styles.module.scss";
 import BasketItem from "../BasketItem";
 
 export default function BasketDetails() {
-  // const [items, setItems] = useState([{ name: "iPhone11", url: "image" }]);
-  // const buttonClasses = cn(styles.Container, isOpen && styles.Open);
+  let productIds = Object.keys(localStorage);
 
   return (
     <div className={styles.Container}>
-      <BasketItem />
-      <BasketItem />
-      <BasketItem />
+      {productIds.map((id, i) => {
+        return <BasketItem key={i} productId={id} />;
+      })}
     </div>
   );
 }

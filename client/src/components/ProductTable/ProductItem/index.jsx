@@ -7,7 +7,6 @@ import { calculateDiscountedPrice } from "../../../utils/helpers";
 
 export default function ProductItem({ product }) {
   const [isHovered, setIsHovered] = useState(false);
-
   const {
     name,
     brand,
@@ -18,6 +17,7 @@ export default function ProductItem({ product }) {
 
   const onMouseEnter = () => setIsHovered(true);
   const onMouseLeave = () => setIsHovered(false);
+
   return (
     <div
       className={cn(styles.Container, isHovered ? styles.Stroke : undefined)}
@@ -60,7 +60,7 @@ export default function ProductItem({ product }) {
           />
           <div className={cn(styles.Content, styles.Hover)}>
             <div className={styles.Name}>{name}</div>
-            <AddButton />
+            <AddButton product={product} />
           </div>
         </>
       )}
