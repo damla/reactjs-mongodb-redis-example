@@ -4,21 +4,24 @@ import { ProductsProvider } from "./contexts/Products/ProductsContext";
 import { BasketProvider } from "./contexts/Basket/BasketContext";
 import { FiltersProvider } from "./contexts/Filters/FiltersContext";
 import { ModalProvider } from "./contexts/Modal/ModalContext";
+import { SortProvider } from "./contexts/Sort/SortContext";
 
 function App() {
   return (
     <FiltersProvider>
       <ProductsProvider>
-        <BasketProvider>
-          <ModalProvider>
-            <Router>
-              <Switch>
-                <Route path="/" exact component={Home} />
-                <Route path="*" component={Error} />
-              </Switch>
-            </Router>
-          </ModalProvider>
-        </BasketProvider>
+        <SortProvider>
+          <BasketProvider>
+            <ModalProvider>
+              <Router>
+                <Switch>
+                  <Route path="/" exact component={Home} />
+                  <Route path="*" component={Error} />
+                </Switch>
+              </Router>
+            </ModalProvider>
+          </BasketProvider>
+        </SortProvider>
       </ProductsProvider>
     </FiltersProvider>
   );
