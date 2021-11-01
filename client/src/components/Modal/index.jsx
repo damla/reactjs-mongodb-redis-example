@@ -1,6 +1,8 @@
 import styles from "./styles.module.scss";
+import { useModal } from "../../contexts/Modal/ModalContext";
 
 export default function Modal() {
+  const { yes, no } = useModal();
   return (
     <div className={styles.Container}>
       <div className={styles.Header}>
@@ -17,8 +19,12 @@ export default function Modal() {
         </p>
       </div>
       <div className={styles.Footer}>
-        <button className={styles.Yes}>EVET</button>
-        <button className={styles.No}>HAYIR</button>
+        <button className={styles.Yes} onClick={yes}>
+          EVET
+        </button>
+        <button className={styles.No} onClick={no}>
+          HAYIR
+        </button>
       </div>
     </div>
   );

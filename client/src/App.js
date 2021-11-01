@@ -3,18 +3,21 @@ import { Home, Error } from "./pages";
 import { ProductsProvider } from "./contexts/Products/ProductsContext";
 import { BasketProvider } from "./contexts/Basket/BasketContext";
 import { FiltersProvider } from "./contexts/Filters/FiltersContext";
+import { ModalProvider } from "./contexts/Modal/ModalContext";
 
 function App() {
   return (
     <FiltersProvider>
       <ProductsProvider>
         <BasketProvider>
-          <Router>
-            <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="*" component={Error} />
-            </Switch>
-          </Router>
+          <ModalProvider>
+            <Router>
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="*" component={Error} />
+              </Switch>
+            </Router>
+          </ModalProvider>
         </BasketProvider>
       </ProductsProvider>
     </FiltersProvider>

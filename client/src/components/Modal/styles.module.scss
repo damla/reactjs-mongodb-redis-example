@@ -57,6 +57,10 @@
       outline: none;
       border: none;
       color: #fff;
+
+      &:hover {
+        background: #66b32c;
+      }
     }
 
     .No {
@@ -68,6 +72,10 @@
       outline: none;
       border: none;
       color: #fff;
+
+      &:hover {
+        background: rgb(190, 63, 63);
+      }
     }
   }
 }
