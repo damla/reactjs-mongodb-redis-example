@@ -1,9 +1,37 @@
-import { createContext, useState, useContext } from "react";
+import {
+  createContext,
+  useState,
+  useContext,
+  useLayoutEffect,
+  useCallback,
+} from "react";
+import { useProducts } from "../Products/ProductsContext";
 
 const BasketContext = createContext();
-
+// galiba butun contextleri ayirmam gerekiyor
 export const BasketProvider = ({ children }) => {
-  const [count, setCount] = useState(localStorage.length);
+  const { products } = useProducts();
+  const [count, setCount] = useState(0);
+
+  const getItems = useCallback(() => {
+    // varolan keyler bizim product listimizdeki idlere ait ise
+    // eylem almak icin kontrol saglandi
+    let filteredProducts;
+    const keys = Object.keys(localStorage);
+
+    filteredProducts = keys
+      .map((key) => {
+        return products.initial.find((p) => p._id === key);
+      })
+      .filter((element) => element);
+
+    return filteredProducts;
+  }, [products.initial]);
+
+  // paint oncesi degeri cekebilmek icin useLayoutEffect kullanildi
+  useLayoutEffect(() => {
+    setCount(getItems().length);
+  }, [getItems]);
 
   // add id - value pair
   const addItem = (item) => {
@@ -19,6 +47,7 @@ export const BasketProvider = ({ children }) => {
 
   const values = {
     addItem,
+    getItems,
     removeItem,
     count,
     setCount,

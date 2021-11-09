@@ -11,7 +11,6 @@ export default function Link({ filterName, color, brand, sortingType }) {
 
   const handleFilter = () => {
     setClicked(!isClicked);
-
     let filterList = filters;
 
     if (color) {
@@ -19,6 +18,7 @@ export default function Link({ filterName, color, brand, sortingType }) {
       if (index < 0) {
         filterList.push({ color: color.name });
       } else {
+        // zaten var ise eklememesi icin
         filterList.splice(index, 1);
       }
     }
@@ -86,6 +86,23 @@ export default function Link({ filterName, color, brand, sortingType }) {
       });
     }
   };
+  // sorted uzerine filtreleme calismiyor
+
+  // let selectedColor = [];
+  // let selectedBrand = [];
+
+  // const handleFilter = () => {
+  //   setClicked(!isClicked);
+
+  //   if (color && !filters.color.includes((c) => c.name === color.name))
+  //     selectedColor.push(color.name);
+
+  //   if (brand && !filters.brand.includes((b) => b.name === brand.name))
+  //     selectedBrand.push(brand.name);
+
+  //   setFilters([{ color: selectedColor }, { brand: selectedBrand }]);
+  //   console.log(filters);
+  // };
 
   return (
     <>
@@ -93,7 +110,7 @@ export default function Link({ filterName, color, brand, sortingType }) {
         <li
           onClick={() => {
             setSelectedSortType(sortingType);
-            sort();
+            sort(sortingType);
           }}
           className={cn(
             styles.Container,

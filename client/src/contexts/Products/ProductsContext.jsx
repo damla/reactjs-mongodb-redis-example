@@ -5,11 +5,12 @@ const ProductsContext = createContext();
 
 export const ProductsProvider = ({ children }) => {
   const [products, setProducts] = useState({
-    initial: [],
-    searched: [],
-    filtered: [],
-    sorted: [],
+    initial: [], // ilk urun verisi
+    searched: [], // aranmis olan urun verileri
+    filtered: [], // filtrelenmis olan urun verileri
+    sorted: [], // siralama sonucu olusan veriler
   });
+
   const [filters, setFilters] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -22,13 +23,17 @@ export const ProductsProvider = ({ children }) => {
       const res = await axios.get(
         `${process.env.REACT_APP_BACKEND_ENDPOINT}/products/all`
       );
-      setProducts({
-        initial: res.data,
-        searched: [],
-        filtered: [],
-        sorted: [],
-      });
-      setLoading(false);
+      if (res) {
+        setProducts({
+          initial: res.data,
+          searched: [],
+          filtered: [],
+          sorted: [],
+        });
+      } else {
+        console.error("Something wrong happened while fetching brands data.");
+      }
+      return setLoading(false);
     };
     fetchProducts();
   }, []);

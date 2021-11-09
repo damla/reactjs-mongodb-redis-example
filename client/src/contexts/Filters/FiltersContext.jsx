@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, useMemo } from "react";
+import { createContext, useState, useContext, useEffect } from "react";
 import axios from "axios";
 
 const FiltersContext = createContext();
@@ -12,7 +12,7 @@ export const FiltersProvider = ({ children }) => {
   const [loadingColors, setLoadingColors] = useState(true);
 
   // fetch all Brands
-  useMemo(() => {
+  useEffect(() => {
     const fetchBrands = async () => {
       setLoadingBrands(true);
       const res = await axios.get(
@@ -29,7 +29,7 @@ export const FiltersProvider = ({ children }) => {
   }, []);
 
   // fetch all Colors
-  useMemo(() => {
+  useEffect(() => {
     const fetchColors = async () => {
       setLoadingColors(true);
       const res = await axios.get(
@@ -40,7 +40,7 @@ export const FiltersProvider = ({ children }) => {
       } else {
         console.error("Something wrong happened while fetching colors data.");
       }
-      setLoadingColors(false);
+      return setLoadingColors(false);
     };
     fetchColors();
   }, []);

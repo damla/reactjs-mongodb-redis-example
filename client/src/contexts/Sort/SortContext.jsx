@@ -9,7 +9,7 @@ export const SortProvider = ({ children }) => {
 
   let sortedData = [];
 
-  const sort = () => {
+  const sort = (selectedSortType) => {
     switch (selectedSortType) {
       case "lessToMore":
         if (products.filtered.length > 0) {
@@ -42,6 +42,7 @@ export const SortProvider = ({ children }) => {
         }
         break;
       case "aToZ":
+        // eksik: date'e gore siralanmadi
         if (products.filtered.length > 0) {
           sortedData = products.filtered.sort((a, b) => {
             if (b.name > a.name) {

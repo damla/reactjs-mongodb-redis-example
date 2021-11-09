@@ -1,14 +1,20 @@
-// import cn from "classnames";
+import React, { Fragment } from "react";
 import styles from "./styles.module.scss";
 import BasketItem from "../BasketItem";
+import { useBasket } from "../../../contexts/Basket/BasketContext";
 
 export default function BasketDetails() {
-  let productIds = Object.keys(localStorage);
+  const { getItems } = useBasket();
+
+  let products = getItems();
+  // REFACTOR: getItems fonksiyonu kullanilarak butun urunler cekildi, boylece
+  // kontrol asamasi context icerisinde yapildi
 
   return (
     <div className={styles.Container}>
-      {productIds.map((id, i) => {
-        return <BasketItem key={i} productId={id} />;
+      {products.map((product, i) => {
+        if (product) return <BasketItem key={i} product={product} />;
+        return <Fragment />;
       })}
     </div>
   );
