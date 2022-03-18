@@ -1,7 +1,7 @@
 {
   "name": "search-page-backend",
   "version": "1.0.0",
-  "description": "Server created for Hepsiburada React Challenge.",
+  "description": "Server of the project",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/patika-hepsiburada-react-bootcamp/hepsiburada-react-challenge"
+    "url": "git+https://github.com/damla/reactjs-mongodb-redis-example"
   },
   "author": "Damla Köksal",
   "license": "ISC",
