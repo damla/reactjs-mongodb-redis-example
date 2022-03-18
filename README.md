@@ -1,12 +1,7 @@
-# Hepsiburada React Challenge
+# Demo Linkleri
 
 - [🔗 Client](https://hb-react-challenge-frontend.netlify.app)
 - [🔗 Server](https://hb-react-challenge-backend.herokuapp.com)
-
-## Proje Amacı
-
-- Hepsiburada için arama sayfası yapmak amacıyla geliştirilimiştir.
-- Tasarım olarak bu [proje](https://www.figma.com/file/Wr7Usgaisuz4BPiWM8kuIy/Hepsiburada-Storefront-React-Challange?node-id=1%3A267) ele alınmıştır.
 
 ## Kullanılan Teknolojiler
 
