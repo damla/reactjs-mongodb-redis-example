@@ -23,12 +23,18 @@
 
 - Unit test için [Mocha](https://mochajs.org) ve [Chai](https://www.chaijs.com) kütüphaneleri kullanılmıştır.
 
+## Info
+
+⚠️ Projenin filtreleme ve test kısımları tamamlanmadı! ⚠️
+
+
 ## Uygulamanın Local'de Çalıştırılması
 
 - Server' ın ayağa kaldırılması için aşağıdaki komutlar girilmelidir.
 
 ```bash
 cd server
+yarn
 yarn start
 ```
 
@@ -36,5 +42,6 @@ yarn start
 
 ```bash
 cd client
+yarn
 yarn start
 ```
