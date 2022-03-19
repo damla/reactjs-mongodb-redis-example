@@ -34,6 +34,7 @@
 
 ```bash
 cd server
+yarn
 yarn start
 ```
 
@@ -41,5 +42,6 @@ yarn start
 
 ```bash
 cd client
+yarn
 yarn start
 ```
